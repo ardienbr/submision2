@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
 	echo fread($content, filesize($fileToUpload));
 		
 	$blobClient->createBlockBlob($containerName, $fileToUpload, $content);
-	header("Location: upload.php");
+	header("Location: index.php");
 }	
 	
 $listBlobsOptions = new ListBlobsOptions();
